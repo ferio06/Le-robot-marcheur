@@ -1,0 +1,10 @@
+controller_list:
+  - name: fake_front_left_leg_controller
+    joints:
+      - FrontLeftJoint_1
+      - FrontLeftJoint_2
+      - FrontLeftJoint_3
+      - FrontLeftJoint_4
+initial:  # Define initial robot poses.
+  - group: front_left_leg
+    pose: Leftfront_leftPose1
