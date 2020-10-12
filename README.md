@@ -19,13 +19,24 @@ catkin build
 source devel/setup.bash
 ```
 
-Maintenant on peut lancer le package qui nous permet controller les mouvements de notre robot par le package qu'on a créer precedement par le service :
+Pour lancer l'urdf pour une jambe de notre robot de notre package "urdf_robot" appelé "jambe_urdf.launch" on lance la commande :
+```
+roslaunch urdf_robot jambe_urdf.launch
+```
+
+Pour lancer le package qui nous permet controller les mouvements de cette jambe de notre robot par le package "udm_project_moveit_configs" crée par le service :
 ```
 roslaunch moveit_setup_assistant setup_assistant.launch
 ```
-Pour cela on lance la commande :
+On lance la commande :
 ```
-roslaunch udm_hand_moveit_configs demo.launch
+roslaunch udm_project_moveit_config demo.launch
+```
+
+Pour visualisé le robot après l'ajout des autres jambes qu'on a crée avec le package nommé "urdf_quad_complet" où il y a
+l’urdf qu’on a nommé "piedcomplet.urdf" contenant l’ensemble des membres ainsi que la base_link de notre robot marcheur :
+```
+r o sl a u n c h u dm p r o j e c t c o n t r ol demo . l aunch
 ```
 On laisse le service se lancer puis on ouvre un autre terminale dans le même dossier catkin_ws afin de lancer le service pour le package udm_hand_control pour le contrôl des mouvents de la main robot par cinematique direct et indirect que l'on lancera à partir des commandes :
 ```
