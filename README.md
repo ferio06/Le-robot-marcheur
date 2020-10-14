@@ -33,17 +33,9 @@ On lance la commande :
 roslaunch udm_project_moveit_config demo.launch
 ```
 
-Pour visualisé le robot après l'ajout des autres jambes qu'on a crée avec le package nommé "urdf_quad_complet" où il y a
-l’urdf qu’on a nommé "piedcomplet.urdf" contenant l’ensemble des membres ainsi que la base_link de notre robot marcheur :
+Pour visualisé le control du robot droite, à gauche, à avant ou en arrière après l'ajout des autres jambes qu'on a crée avec le package nommé "urdf_quad_complet" où il y a l’urdf qu’on a nommé "piedcomplet.urdf" contenant l’ensemble des membres ainsi que la base_link de notre robot marcheur,on lance la commande :
 ```
-r o sl a u n c h u dm p r o j e c t c o n t r ol demo . l aunch
-```
-On laisse le service se lancer puis on ouvre un autre terminale dans le même dossier catkin_ws afin de lancer le service pour le package udm_hand_control pour le contrôl des mouvents de la main robot par cinematique direct et indirect que l'on lancera à partir des commandes :
-```
-roslaunch udm_hand_control direct.launch
-```
-```
-roslaunch udm_hand_control indirect.launch
+roslaunch udm_project_control demo.launch
 ```
 
 
